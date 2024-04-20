@@ -1,0 +1,26 @@
+body{
+    background-color: burlywood;
+}
+.nameInput{
+    border-radius: 15px;
+    border: 2px solid rgb(192, 91, 47);
+    padding: 10px;
+    background-color: rgb(224, 212, 197);
+}
+.submitInput{
+    border-radius: 15px;
+    border: 2px solid rgb(192, 91, 47);
+    font-size: 1rem;
+    padding: 5px;
+    background-color: rgb(224, 212, 197);
+}
+.submitInput:hover{
+    background-color: darkgoldenrod;
+}
+.submitInput:active{
+    background-color: aquamarine;
+}
+.form-flex{
+    display: flex;
+    gap: 2rem;
+}
