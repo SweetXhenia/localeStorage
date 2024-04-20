@@ -113,3 +113,61 @@ toList.addEventListener("click", function () {
     document.querySelector("#list-criminals").appendChild(paragraph);
   });
 });
+
+//?-------------------------Normální cookies-------------------------------
+/* let cookieBar = document.querySelector(".cookie-bar");
+let cookieBarBtnAccp = document.querySelector(".cookie-bar__accept");
+let cookieBarBtnMng = document.querySelector(".cookie-bar__manage");
+let cookieBarText = document.querySelector(".cookie-bar__text");
+
+cookieBarBtnAccp.addEventListener("click", function () {
+  cookieBar.style.display = "none";
+});
+
+cookieBarBtnMng.addEventListener("click", function () {
+  cookieBarText.innerHTML = `Dám ti pouze čokoládové cookies, protože jsou moc tučné a sladké. <a href="#">Více info zde.</a>`;
+}); */
+
+//?-------------------------Modal cookies----------------------------
+let cookieBar = document.querySelector(".cookie-wrap");
+let cookieBarBtnAccp = document.querySelector(".cookie-bar__accept");
+let cookieBarBtnMng = document.querySelector(".cookie-bar__manage");
+let cookieBarText = document.querySelector(".cookie-bar__text");
+
+cookieBarBtnAccp.addEventListener("click", function () {
+  cookieBar.style.display = "none";
+});
+
+cookieBarBtnMng.addEventListener("click", function () {
+  cookieBarText.innerHTML = `Dám ti pouze čokoládové cookies, protože jsou moc tučné a sladké. <a href="#">Více info zde.</a>`;
+  cookieBarBtnAccp.textContent = "Nažer se!";
+  cookieBarBtnMng.textContent = "";
+});
+
+//?--------------------------FAQ-------------------------
+let faqSet = document.querySelectorAll(".faq__set");
+let faqBtn = document.querySelectorAll(".faq__btn");
+
+/* faqBtn.forEach(function (oneButton) {
+  oneButton.addEventListener("click", function () {
+    let text =
+      oneButton.parentElement.parentElement.querySelector(".faq__set--text");
+    text.style.maxHeight = "unset";
+    text.style.fontSize = "16px";
+  });
+}); */
+
+faqSet.forEach(function (oneSet) {
+  let button = oneSet.querySelector("button");
+  let text = oneSet.querySelector("p");
+
+  button.addEventListener("click", function () {
+    if (text.style.maxHeight) {
+      text.style.maxHeight = null;
+      button.textContent = "➕";
+    } else {
+      text.style.maxHeight = text.scrollHeight + "px";
+      button.textContent = "➖";
+    }
+  });
+});
